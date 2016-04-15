@@ -3,7 +3,7 @@
 
     {% if posts %}
         <header class="page-header">
-            <h1 class="page-title">{{ __('Search Results for: %s', 'timberscores')|format('<span>' ~ function('get_search_query') ~ '</span>') }}</h1>
+            <h1 class="page-title">{{ __('Search Results for: %s', 'mmmtimber')|format('<span>' ~ function('get_search_query') ~ '</span>') }}</h1>
         </header><!-- .page-header -->
 
         {% for post in posts %}
@@ -13,7 +13,7 @@
             {{ timber_get_template_part('content', 'search', { 'post': post }) }}
         {% endfor %}
 
-        {{ function('timberscores_paging_nav') }}
+        {{ function('mmmtimber_paging_nav') }}
     {% else %}
         {{ timber_get_template_part('content', 'none') }}
     {% endif %}

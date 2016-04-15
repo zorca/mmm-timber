@@ -3,41 +3,41 @@
         <h1 class="entry-title">{{ post.title }}</h1>
 
         <div class="entry-meta">
-            {{ function('timberscores_posted_on') }}
+            {{ function('mmmtimber_posted_on') }}
         </div><!-- .entry-meta -->
     </header><!-- .entry-header -->
 
     <div class="entry-content">
         {{ post.content }}
         {{ function('wp_link_pages', {
-            'before': '<div class="page-links">' . __('Pages:', 'timberscores'),
+            'before': '<div class="page-links">' . __('Pages:', 'mmmtimber'),
             'after': '</div>'
         }) }}
     </div><!-- .entry-content -->
 
     <footer class="entry-footer">
         {# translators: used between list items, there is a space after the comma #}
-        {% set cat_list = function('get_the_category_list', __(', ', 'timberscores'), '', post.ID) %}
-        {% set tag_list = function('get_the_tag_list', __(', ', 'timberscores'), '', '', post.ID) %}
+        {% set cat_list = function('get_the_category_list', __(', ', 'mmmtimber'), '', post.ID) %}
+        {% set tag_list = function('get_the_tag_list', __(', ', 'mmmtimber'), '', '', post.ID) %}
 
-        {% if not function('timberscores_categorized_blog') %}
+        {% if not function('mmmtimber_categorized_blog') %}
             {# This blog only has 1 category so we just need to worry about tags in the meta text #}
             {% if tag_list %}
-                {% set meta_text = __('This entry was tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'timberscores') %}
+                {% set meta_text = __('This entry was tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'mmmtimber') %}
             {% else %}
-                {% set meta_text = __('Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'timberscores') %}
+                {% set meta_text = __('Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'mmmtimber') %}
             {% endif %}
         {% else %}
             {# But this blog has loads of categories so we should probably display them here #}
             {% if tag_list %}
-                {% set meta_text = __('This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'timberscores') %}
+                {% set meta_text = __('This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'mmmtimber') %}
             {% else %}
-                {% set meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'timberscores' ) %}
+                {% set meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'mmmtimber' ) %}
             {% endif %}
         {% endif %}
 
         {{ meta_text|format(cat_list, tag_list, post.permalink) }}
 
-        {{ function('edit_post_link', __('Edit', 'timberscores'), '<span class="edit-link">', '</span>', post.ID) }}
+        {{ function('edit_post_link', __('Edit', 'mmmtimber'), '<span class="edit-link">', '</span>', post.ID) }}
     </footer><!-- .entry-footer -->
 </article><!-- #post-## -->

@@ -4,7 +4,7 @@
     {% for post in posts %}
         {{ timber_get_template_part('content', 'single', { 'post': post }) }}
 
-        {{ function('timberscores_post_nav') }}
+        {{ function('mmmtimber_post_nav') }}
 
         {# If comments are open or we have at least one comment, load up the comment template #}
         {% if function('comments_open') or function('get_comments_number', post.ID) > 0 %}

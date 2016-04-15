@@ -7,14 +7,14 @@
         </aside>
 
         <aside id="archives" class="widget">
-            <h1 class="widget-title">{{ __('Archives', 'timberscores') }}</h1>
+            <h1 class="widget-title">{{ __('Archives', 'mmmtimber') }}</h1>
             <ul>
                 {{ function('wp_get_archives', { 'type': 'monthly' }) }}
             </ul>
         </aside>
 
         <aside id="meta" class="widget">
-            <h1 class="widget-title">{{ __('Meta', 'timberscores') }}</h1>
+            <h1 class="widget-title">{{ __('Meta', 'mmmtimber') }}</h1>
             <ul>
                 {{ function('wp_register') }}
                 <li>{{ function('wp_loginout') }}</li>

@@ -6,11 +6,11 @@
     <div class="entry-content">
         {{ post.content }}
         {{ function('wp_link_pages', {
-            'before': '<div class="page-links">' . __('Pages:', 'timberscores'),
+            'before': '<div class="page-links">' . __('Pages:', 'mmmtimber'),
             'after': '</div>'
         }) }}
     </div><!-- .entry-content -->
     <footer class="entry-footer">
-        {{ function('edit_post_link', __('Edit', 'timberscores'), '<span class="edit-link">', '</span>', post.ID) }}
+        {{ function('edit_post_link', __('Edit', 'mmmtimber'), '<span class="edit-link">', '</span>', post.ID) }}
     </footer><!-- .entry-footer -->
 </article><!-- #post-## -->

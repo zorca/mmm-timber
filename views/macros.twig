@@ -1,4 +1,4 @@
-{% macro timberscores_posted_on(post) %}
+{% macro mmmtimber_posted_on(post) %}
 {% spaceless %}
 
     {% block posted_on_time %}
@@ -16,7 +16,7 @@
 
     {{ block('posted_on_time') }}
 
-    <span class="posted-on">{{ __('Posted on', 'timberscores') }} <a href="{{ post.permalink }}" rel="bookmark">{{ block('posted_on_time') }}</a></span>
+    <span class="posted-on">{{ __('Posted on', 'mmmtimber') }} <a href="{{ post.permalink }}" rel="bookmark">{{ block('posted_on_time') }}</a></span>
 
     <span class="byline"> by <span class="author vcard"><a class="url fn n" href="{{ post.author.link }}">{{ post.author.name }}</a></span></span>
 
