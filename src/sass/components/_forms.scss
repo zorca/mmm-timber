@@ -1,0 +1,112 @@
+/*
+	BASE
+*/
+::-webkit-input-placeholder { color: #C8C8CA; }
+:-moz-placeholder 			{ color: #C8C8CA; opacity:  1; }
+::-moz-placeholder 			{ color: #C8C8CA; opacity:  1; }
+:-ms-input-placeholder 		{ color: #C8C8CA; }
+
+input.drpdown { -webkit-appearance: none; -moz-appearance: none; outline: 0; text-shadow: 0 0 0 rgba(0,0,0,0); box-shadow: none; }
+
+textarea { height: 206px; }
+
+input:not([type="submit"]), textarea, select { width: 100%; outline: none; resize: none; border: 0; }
+
+input:not([type="submit"]), textarea, select, .hint, .file-value  {
+	
+	font-size: 13px; color: $greyBlue; @include font-family('azo reg'); 
+	line-height: 1; text-align: left; letter-spacing: 0.3px; 
+	background-color: #EFEFEF; padding: 12px 12px;
+}
+
+/*
+	CONTACT 7 FORM
+*/
+div[role="form"] {
+	
+	position: relative; margin: 40px auto 0 auto; display: table;
+	
+	// error messages
+	.wpcf7-not-valid-tip { font-size: 9px; color: $error; text-align: right; letter-spacing: 0.6px; position: relative; z-index: 2; margin-bottom: 10px; margin-top: 5px;  }
+
+	div.wpcf7-validation-errors { color: $error; padding: 10px 10px 10px 0; border: 0; margin: 0; font-size: 13px; }
+	
+	.wpcf7-not-valid { border: 1px solid rgba(255,0,0,0.15); }
+	
+	// required 
+	.required:before { content: '*'; color: $error; position: absolute; font-size: 12px; right: 10px; top: 10px; }
+	
+	// input container
+	.input-container { margin: 0 0 20px 0; }
+	.wpcf7-form-control-wrap { display: block; }
+	
+	
+	
+	
+	// file types do not support default values
+	.file-value {
+		
+		background: transparent;
+		border-bottom: 1px solid #EFEFF9;
+	
+		p { font-size: 14px; color: #858689; line-height: 1; text-align: left; letter-spacing: 0.3px; padding-left: 15px; }
+	}
+	
+	// checkboxes and radio buttons
+	.wpcf7-radio, .wpcf7-checkbox { font-size: 14px; color: #858689; line-height: 1; text-align: left; letter-spacing: 0.3px; }
+	.wpcf7-checkbox span.wpcf7-list-item, .wpcf7-radio span.wpcf7-list-item { margin-left: 0; }
+	.wpcf7-radio .wpcf7-list-item-label, .wpcf7-checkbox .wpcf7-list-item-label { display: inline-block; padding: 10px 10px 10px 0; min-width: 140px; }
+	.wpcf7-radio .wpcf7-list-item { margin-right: 10px; }
+	.wpcf7-radio .wpcf7-list-item:last-child { margin-right: 0; }
+	input[type="radio"],input[type="checkbox"] { display: inline-block; width: auto;  }
+	
+	// remove spinner number inputs
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	    -moz-appearance: none;
+	    margin: 0; 
+	}
+	
+	// submit button
+	// global style added
+	//input[type="submit"] { 
+	//	
+	//	width: auto; background: transparent; margin: 30px auto; display: block; border: 3px solid $lightBlue; padding: 20px 100px; 
+	//	color: #005374; text-transform: uppercase; font-size: 18px; letter-spacing: 2px;
+	//}
+	
+	img.ajax-loader { bottom: 19px; position: absolute; right: 0; width: 20px; }
+	
+	input[type="submit"] + p { margin-bottom: 80px; }
+	
+	// preloader
+	div.wpcf7-response-output { display: none !important; }
+	div.wpcf7-mail-sent-ng { color: $error; }
+	div.wpcf7-mail-sent-ok { color: #398f14;}
+	
+}
+
+
+
+
+/*--------------------------------------------
+	BREAKPOINTS
+--------------------------------------------*/
+
+@media only screen and (min-width: 350px) { 
+
+}
+
+@media only screen and (min-width: 568px) { 
+
+}
+
+@media only screen and (min-width: 768px) { 
+	
+
+}
+
+@media only screen and (min-width: 1024px) { 
+
+}

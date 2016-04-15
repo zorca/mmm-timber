@@ -1,0 +1,60 @@
+/*
+	POPUPS
+*/
+#overlay { position: fixed; width: 100%; height: 100%; z-index: 8; left: 0; top: 0; background: #FBFCFE; opacity: 0; visibility: hidden; }
+#overlay.in { opacity: 0.8; visibility: visible; transition: opacity 1s ease; }
+#overlay.out { opacity: 0; transition: opacity 1s ease; }
+#overlay.default { visibility: hidden; }
+
+
+#leave-permission {
+	
+	button { display: inline-block; margin-top: 10px; margin-left: 20px; }
+	button:nth-of-type(1) { margin-left: 0; }
+}
+
+#popup {
+	
+	width: 90%; max-width: 650px; background: #FFF; padding: 25px; border: 1px solid #DDDEE0; 
+	position: fixed; z-index: 8; left: 50%; top: 50%; transform: translate(-50%,-50%);
+	opacity: 0; transition: opacity 0.5s cubic-bezier(0.070, 0.080, 0.215, 0.840) 0s;
+	
+	.container { position: relative; height: 100%; overflow: hidden; }
+	
+	h2 { margin: 25px 0; }
+	
+	p { width: 90%; }
+	
+	#close-popup { position: absolute; z-index: 2; right: 0; top: 0; width: 25px; height: 25px; background: #FFF url(../images/site_icons/closeX.png) no-repeat; background-size: 100%; cursor: pointer; }
+}
+
+#popup.in { opacity: 1; transition: opacity 0.5s cubic-bezier(0.070, 0.080, 0.215, 0.840) 0s; }
+#popup.out { opacity: 0 !important; transition: opacity 0.5s cubic-bezier(0.070, 0.080, 0.215, 0.840) 0s; }
+
+#popup.large {
+	
+	max-height: 100%; height: 80%; overflow: hidden;
+
+	.scrollable { height: 88%; overflow: auto; -webkit-overflow-scrolling: touch; top: 40px; position: relative; padding: 0 10px; }
+}
+
+/*--------------------------------------------
+	BREAKPOINTS
+--------------------------------------------*/
+
+@media only screen and (min-width: 350px) { 
+
+}
+
+@media only screen and (min-width: 568px) { 
+
+}
+
+@media only screen and (min-width: 768px) { 
+	
+
+}
+
+@media only screen and (min-width: 1024px) { 
+
+}

@@ -1,0 +1,35 @@
+/* 
+	LOGIN
+	https://premium.wpmudev.org/blog/customize-login-page/ 
+*/
+
+.login {
+	
+	// logo 
+	h1 a  { background-image: url('../images/logos/tbc_horizontal.png'); width: 130px; height: 40px; background-size: cover; margin: 0; }
+	
+	label { font-size: 12px; color: #555555; }
+	
+	// inputs
+	input[type="text"],
+	input[type="password"]  { background-color: #ffffff; border-color: #dddddd; }
+	
+	input[type="checkbox"]  { background-color: #ffffff; border-color: #dddddd; }
+	input[type=checkbox]:checked:before { color: $red; }
+	
+	// buttons
+	.button-primary { min-width: 100px; background: #414141 !important; border: 0; box-shadow: none; outline: none; text-shadow: none; color: #ffffff; }
+	
+	.button-primary:hover, 
+	.button-primary:active { background: $black !important; border: 0; box-shadow: none; outline: none; }
+	
+	.button-primary:focus { border: 0; box-shadow: none; outline: none; }
+	
+	a:hover { color: $red !important; }
+	
+	// login errors 
+	#login_error, .message { border-color: #e31b23; }
+	
+}
+
+

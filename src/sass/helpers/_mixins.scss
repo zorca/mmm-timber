@@ -1,0 +1,92 @@
+@mixin font-family($family) {
+	
+	@if $family == 'gotham book' {
+		font-family: "Gotham SSm A", "Gotham SSm B"; font-style: normal; font-weight: 400;
+	}
+	@if $family == 'gotham light' {
+		font-family: "Gotham SSm A", "Gotham SSm B"; font-style: normal; font-weight: 300;
+	}
+	@if $family == 'gotham bold' {
+		font-family: "Gotham SSm A", "Gotham SSm B"; font-style: normal; font-weight: 700;
+	}
+}
+
+@mixin font-size($size) {
+  font-size: $size + px;
+  font-size: ( $size / 10 ) + rem;
+}
+
+
+//@extend %clearfix;
+%clearfix {
+	//*zoom: 1;
+  	&:before, &:after {
+    	content: "";
+    	display: table;
+  	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin clearfix() {
+	
+	//*zoom: 1;
+  	&:before, &:after {
+    	content: "";
+    	display: table;
+  	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin vertically-center() {
+	
+  	top: 50%;
+	@include translate(0,-50%);
+}
+
+@mixin vert-horz-center( $txt: 'true' ) {
+	
+	position: absolute; 
+	left: 50%;
+	top: 50%;
+	@include translate(-50%,-50%);
+
+//	position: absolute; top: 50%; left: 50%; margin: auto; 
+//	@include translate(-50%,-50%);
+	//-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1, M12=0, M21=0, M22=1, SizingMethod='auto expand')";
+}
+
+@mixin gpu-accel(){
+	
+	-webkit-backface-visibility: hidden;
+  	   -moz-backface-visibility: hidden;
+     	-ms-backface-visibility: hidden;
+  	        backface-visibility: hidden;
+
+  	-webkit-perspective: 1000;
+  	   -moz-perspective: 1000;
+  	    -ms-perspective: 1000;
+  	        perspective: 1000;
+
+  	-webkit-transform: translateZ(0);
+  	    -ms-transform: translateZ(0);
+       -moz-transform: translateZ(0);
+  	        transform: translateZ(0);
+}
+
+@mixin keyframe-anim($funk, $speed, $ease, $delay) {
+	
+	-webkit-animation: $funk $speed $ease $delay;
+  	   -moz-animation: $funk $speed $ease $delay;
+  	    -ms-animation: $funk $speed $ease $delay;
+	        animation: $funk $speed $ease $delay;
+	
+	-webkit-animation-fill-mode: forwards;
+	   -moz-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+}
+
+

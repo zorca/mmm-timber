@@ -1,0 +1,44 @@
+/*
+Theme Name: mmmtimber
+Theme URI: http://underscores.me/
+Author: mmm
+Author URI: http://underscores.me/
+Description:
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: mmmtimber
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+BHS is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+
+	Right now the styles are being loaded with globbing. Globbing adds styles alphabetically.
+	In order to have a specific order, you need to name the files correctly or list each one out. 
+
+
+--------------------------------------------------------------*/
+
+//@import "helpers/**/*";
+
+//@import "base/admin";
+//@import "base/reset";
+//@import "base/base";
+//@import "base/typography";
+//@import "base/anim";
+
+//@import "layout/**/*";
+//@import "components/**/*";
+@import "pages/**/*";
+@import "vendors/**/*";
+
+
+
