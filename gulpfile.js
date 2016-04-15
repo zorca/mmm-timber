@@ -72,10 +72,15 @@ gulp.task('libs', function() {
 // watch js and scss files while developing
 gulp.task('watch', function() {
 
-	livereload.listen();
+	var reload = livereload();
 	gulp.watch('src/js/*.js', ['scripts']);
 	gulp.watch('src/lib/*.js', ['libs']);
 	gulp.watch('src/sass/**/*.scss', ['sass', 'adminStyles']);
+
+	//Watch Twig files. TODO: refactoring.
+	gulp.watch('views/**').on('change', function(file) {
+		reload.changed(file.path);
+	});
 	
 });
 
